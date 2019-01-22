@@ -90,15 +90,8 @@ func (d *DNSProvider) Present(domain, token, keyAuth string) error {
 	_ = record.SetField("active", true)
 
 	existingRecord := d.findExistingRecord(zone, recordName)
-
-	if existingRecord != nil {
-		if reflect.DeepEqual(existingRecord.ToMap(), record.ToMap()) {
-			return nil
-		}
-		err = zone.RemoveRecord(existingRecord)
-		if err != nil {
-			return fmt.Errorf("fastdns: %v", err)
-		}
+	if existingRecord != nil && reflect.DeepEqual(existingRecord.ToMap(), record.ToMap()) {
+		return nil
 	}
 
 	return d.createRecord(zone, record)
