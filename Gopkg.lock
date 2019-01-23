@@ -55,7 +55,8 @@
   revision = "a3fa4a771d87bda2514a90a157e1fed1b6897d2e"
 
 [[projects]]
-  digest = "1:d677d9bb0dfb2cf2ec6ab5ff1d2deb08ef88f4b255c9f201f01100933ef001a2"
+  branch = "fix/remove-name"
+  digest = "1:0e0b95dbcbd8f6f507599fe7b6588af729c68cf38333a37fc36f67be2c43cf67"
   name = "github.com/akamai/AkamaiOPEN-edgegrid-golang"
   packages = [
     "client-v1",
@@ -64,8 +65,8 @@
     "jsonhooks-v1",
   ]
   pruneopts = "NUT"
-  revision = "196fbdab2db66d0e231cc363efb63454f55fed1c"
-  version = "v0.6.2"
+  revision = "f17b4807bc8dcf1bacc2ce773d83dae1ce7b3610"
+  source = "github.com/ldez/AkamaiOPEN-edgegrid-golang"
 
 [[projects]]
   digest = "1:823e87ae25170339e2bfd1d6f7c2e27554c6bb5655f91c67b37bd5be45bb6b32"
